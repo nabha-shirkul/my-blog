@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nabha | Bridging Business and Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #00cec9;
+            --bg: #f1f2f6;
+            --text: #2d3436;
+            --card-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        body.dark {
+            --bg: #2d3436;
+            --text: #f5f6fa;
+            --card-bg: rgba(34, 34, 34, 0.85);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            background: linear-gradient(to right, #6c5ce7, #00cec9);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Parallax background */
+        .parallax {
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary);
+            padding-left: 10px;
+        }
+
+        .card h3 {
+            margin-top: 20px;
+            color: inherit;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            color: #2d3436;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        body.dark .badge {
+            color: #1e1e1e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 10px;
+            background: #dfe6e9;
+            color: #636e72;
+            font-size: 1em;
+        }
+
+        body.dark footer {
+            background: #1e1e1e;
+            color: #b2bec3;
+        }
+
+        /* Theme toggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: #2d3436;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        body.dark .theme-toggle {
+            background: #444;
+            color: #f1f2f6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+    <header>
+        <img class="profile-pic" src="profile_pic.JPG" alt="Nabha" />
+        <div class="hero-text">
+            <h1>Bridging Business and Tech</h1>
+            <p>Hands in Code, Eyes on the Big Picture</p>
+        </div>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <section>
+            <div class="card">
+                <h2>Who I Am</h2>
+                <p>Hello, I’m <strong>Nabha</strong>, Associate Solution Architect at <strong>Blazeclan
+                        Technologies</strong>, an ITC Infotech Brand.</p>
+                <p>My responsibility is to
+                    understand the business requirements and help translate them into scalable, secure, and
+                    cost-effective technical solutions. I work with our engineering and product teams to ensure that
+                    what we build not only meets the technical standards but also drives business value.
+
+                    I specialize in designing scalable and efficient solutions tailored to business needs, primarily
+                    focusing on AWS, microservices, and Fintech. My role involves collaborating with cross-functional
+                    teams to bridge the gap between technical requirements and business goals.
+
+                    I am passionate about leveraging technology to solve complex business challenges and drive
+                    innovation. My expertise lies in understanding both the technical and business aspects of projects,
+                    ensuring that solutions are not only technically sound but also aligned with strategic objectives.
+                </p>
+                <ul>
+                    <li>Cloud Architecture (AWS)</li>
+                    <li>Microservices Design</li>
+                    <li>Fintech Engineering</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>My Recent Projects</h2>
+                <h3>🔗 Optty</h3>
+                <p>Universal payments platform with a single API integration for BNPL, wallets, crypto, and more —
+                    simplifying
+                    global payment orchestration for merchants.
+                    Optty is a universal payments platform that provides a single API integration for businesses to
+                    access and manage a wide range of payment methods, including Buy Now Pay Later (BNPL), wallets,
+                    crypto, and more, across multiple countries and currencies. It acts as a payment orchestration
+                    layer, simplifying the integration process for merchants and offering a "Payment as a Service"
+                    (PaaS) solution.
+                </p>
+
+                <h3>📚 EHG (Education Horizons Group)</h3>
+                <p>EdTech company supporting schools with innovative software for better learning, management, and
+                    parent-teacher engagement in Australia.
+                    Education Horizons Group (EHG) is an Australian EdTech company that provides software solutions for
+                    schools. They offer a range of products focused on school management, teaching and learning, and
+                    administration. EHG helps schools streamline operations, improve student outcomes, and enhance
+                    communication between staff, students, and parents
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Accomplishments</h2>
+
+                <h3>🏆 Outstanding Performer of the Year (2023–24)</h3>
+                <p>Recognized as the top performer across organisation, for consistently exceeding performance
+                    benchmarks, driving strategic initiatives, and delivering high-impact solutions. Demonstrated
+                    excellence in architectural planning, technical delivery, and cross-functional collaboration
+                    throughout the year.</p>
+                <span class="badge">Leadership</span>
+                <span class="badge">Architecture</span>
+
+                <h3>🌟 Customer Obsession Recognition</h3>
+                <p>
+                    Earned accolades for embodying customer-first principles — proactively identifying client pain
+                    points, designing scalable and user-centric solutions, and ensuring high levels of satisfaction and
+                    adoption. Contributed to improving customer engagement scores and repeat business by translating
+                    feedback into actionable technical improvements.
+                    Proactively solved customer challenges through scalable, user-centric solutions that drove repeat
+                    business
+                    and satisfaction.</p>
+                <span class="badge">Client Focus</span>
+
+                <h3>🛠️ Best Project Team (2 Years)</h3>
+                <p>Core member of the team awarded 'Best Project Team' for two consecutive years, delivering complex,
+                    high-value solutions on time and within budget. Played a key role in solution architecture,
+                    stakeholder alignment, and risk mitigation. Delivered high-value projects on time and under budget.
+                    Resulted in 30% performance improvement and
+                    25% cost
+                    savings.</p>
+                <span class="badge">Delivery Excellence</span>
+
+                <h3>🚀 Rising Star Award</h3>
+                <p>
+                    Honored with the ‘Rising Star’ award for demonstrating exceptional growth in software development
+                    and solution delivery. Recognized for consistently exceeding role expectations, mentoring junior
+                    developers, and driving technical enhancements that significantly improved system reliability and
+                    scalability.
+
+
+                </p>
+                <span class="badge">Growth</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Thanks for visiting my blog! — Nabha</p>
+    </footer>
+
+    <script>
+        // Theme switcher logic
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        });
+    </script>
